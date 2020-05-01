@@ -14,7 +14,7 @@ class DownloadUnsplash(object):
 		self.headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"}
 
 	def create_dir(self, directory):
-		create_path = r"C:/Users/Administrator/Desktop/Unsplash/{}".format(directory)
+		create_path = r"./Unsplash/{}".format(directory)
 		isExists = os.path.exists(create_path)
 
 		if not isExists:
