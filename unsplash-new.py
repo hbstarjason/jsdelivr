@@ -20,8 +20,10 @@ class DownloadUnsplash(object):
 		isExists = os.path.exists(create_path)
 
 		if not isExists:
-			os.makedirs(create_path)  # 创建目录
-			os.chdir(create_path)  # 切换文件夹
+			# 创建目录
+			os.makedirs(create_path)  
+			# 切换文件夹
+			os.chdir(create_path)  
 			return create_path
 		else:
 			return create_path
