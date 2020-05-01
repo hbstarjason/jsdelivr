@@ -1,5 +1,8 @@
 # _*_ coding:utf-8 _*_
 
+# python3 unsplash.py
+# great-wall-of-china,china
+
 import requests
 import math
 import json
