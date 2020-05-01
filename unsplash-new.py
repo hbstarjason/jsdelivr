@@ -20,9 +20,7 @@ class DownloadUnsplash(object):
 		isExists = os.path.exists(create_path)
 
 		if not isExists:
-			# 创建目录
 			os.makedirs(create_path)  
-			# 切换文件夹
 			os.chdir(create_path)  
 			return create_path
 		else:
@@ -44,7 +42,6 @@ class DownloadUnsplash(object):
 			item["photo_width"] = div["width"]
 			item["photo_height"] = div["height"]
 			
-			# 小图链接，测试用
 			# item["download_url"] = div["urls"]["small"]
 			
 			item["download_url"] = div["links"]["download"]
@@ -65,7 +62,6 @@ class DownloadUnsplash(object):
 			photo_id = photo["photo_id"]
 			user_name = photo["user_name"]
 
-			# 替换极少部分用户名存在的特殊字符
 			for ch in (r'\/:*?"<>|'):
 				user_name = user_name.replace(ch, "")
 
