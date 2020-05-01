@@ -63,6 +63,6 @@ if __name__ == '__main__':
     for i in range(1,page_num+1):
         url = 'http://unsplash.com/napi/search/photos?query='+theme+'&per_page=20&page='+str(i)
         getOnePage(url,path)
-        print('第'+ i +'页下载完毕')
+        print('第'+ str(i) +'页下载完毕')
 
     print('%d张%s主题的照片全部下载完成！' % (num,theme))
