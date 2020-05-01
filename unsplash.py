@@ -61,7 +61,7 @@ if __name__ == '__main__':
     page_num = math.ceil(num/20)
 
     for i in range(1,page_num+1):
-        url = 'http://unsplash.com/napi/search/photos?query='+theme+'&per_page=20&page='+str(i)
+        url = 'http://unsplash.com/napi/search/photos?query='+theme+'&per_page=20&page='+int(i)
         getOnePage(url,path)
         print('第'+ i +'页下载完毕')
 
