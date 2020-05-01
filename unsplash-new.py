@@ -1,5 +1,7 @@
 ##### pip install requests==2.22.0
 
+# _*_ coding:utf-8 _*_
+
 import os
 import time
 import requests
