@@ -1,3 +1,5 @@
+###### python3 bing.py
+
 import re
 import os
 import requests
