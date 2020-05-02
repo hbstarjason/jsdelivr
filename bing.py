@@ -17,27 +17,25 @@ def get_index(resolution, index=1):
             for url in urls}
 
 def download_pic(pics):
-    if os.path.exists('必应壁纸'):
+    if os.path.exists('bing'):
         pass
     else:
-        os.mkdir('必应壁纸')
-        print('目录创建成功')
+        os.mkdir('bing')
+        print('dir create')
     try:
         for pic_name, pic_url in pics.items():
             res = requests.get(pic_url, headers=headers)
-            with open(f"必应壁纸\\{pic_name}.jpg", mode="wb") as f:
+            with open(f"bing/{pic_name}.jpg", mode="wb") as f:
                 f.write(res.content)
             print(f"{pic_name} 下载完成")
     except Exception as e:
         print("下载出错", e)
 
 def input_index():
-    print("必应壁纸下载工具, 本工具未经资源站授权.")
-    print("仅做学习和交流之用, 随时有可能停止维护.")
-    print("目前资源站收容页数为87,当前仅提供1920x1080分辨率下载")
+    print("目前资源站收容页数为127,当前仅提供1920x1080分辨率下载")
     while True:
         sleep(0.1)
-        index = input("请输入要下载的页数(Max=87):")
+        index = input("请输入要下载的页数(Max=127):")
         try:
             if index == "Q":
                 exit()
